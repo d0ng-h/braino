@@ -1,0 +1,10 @@
+.card {
+  margin: 61px 0 24px;
+  padding: 30px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.box {
+  height: 200px;
+}

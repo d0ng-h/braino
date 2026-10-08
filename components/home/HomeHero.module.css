@@ -1,0 +1,22 @@
+.hero {
+  position: relative;
+  height: 465px;
+  overflow: hidden;
+}
+/* 그림이 화면보다 커서 위, 양옆이 살짝 잘림 */
+.bg {
+  position: absolute;
+  left: calc(50% - 259px);
+  top: -42px;
+  width: 512px;
+  height: 507px;
+  object-fit: cover;
+  font-size: 120px;
+  text-align: center;
+}
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}

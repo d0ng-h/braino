@@ -1,0 +1,52 @@
+.bar {
+  position: relative;
+  height: 104px;
+}
+.round {
+  position: absolute;
+  top: 60px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: none;
+  filter: drop-shadow(var(--shadow-btn));
+  cursor: pointer;
+}
+.left {
+  left: 20px;
+}
+.right {
+  right: 20px;
+}
+.circle {
+  position: absolute;
+  inset: 0;
+}
+/* 오른쪽 화살표 그림을 뒤집어서 씀 */
+.arrow {
+  position: absolute;
+  left: 14px;
+  top: 11px;
+  transform: scaleX(-1);
+}
+.title {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  pointer-events: none;
+}
+.bell {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  color: var(--text);
+}
+.green {
+  color: var(--green-bright);
+}

@@ -29,10 +29,21 @@ export function currentStreak(streak: number, lastDone: string | null) {
   return daysBetween(lastDone, today()) <= 1 ? streak : 0
 }
 
-// 진화 이미지 나오면 여기만 바꾸면 됨
+// 학습한 날짜들(정렬된 2026-10-09 형식)에서 가장 길게 연속으로 한 일수
+export function longestStreak(dates: string[]) {
+  let best = 0
+  let run = 0
+  dates.forEach((d, i) => {
+    run = i > 0 && daysBetween(dates[i - 1], d) === 1 ? run + 1 : 1
+    best = Math.max(best, run)
+  })
+  return best
+}
+
+// 홈 맨 위 그림 (배경 + 캐릭터 한장). 진화 이미지 나오면 여기만 바꾸면 됨
 export function charImage(level: number) {
-  if (level >= 1) return '/images/char-egg.png'
-  return '/images/char-egg.png'
+  if (level >= 1) return '/images/home-hero.png'
+  return '/images/home-hero.png'
 }
 
 // 미션 끝났을때 profiles에 저장할 값 (미션 화면 만들때 씀)

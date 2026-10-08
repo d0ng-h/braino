@@ -6,30 +6,45 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  padding: 165px 20px 46px;
+  padding: 172px 20px 55px;
 }
 .head {
-  margin: 0 0 66px 13px;
+  margin-left: 13px;
 }
 .logo {
-  font-size: 58px;
-  line-height: 1;
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: -1.2px;
+}
+/* A 뒤만 더 좁게 (피그마 자간) */
+.kern {
+  letter-spacing: -2.88px;
 }
 .head p {
-  margin-top: 18px;
-  font-size: 15px;
+  margin: 14px 0 0;
+  font-size: 16px;
+  font-weight: 300;
 }
-.gap {
-  margin-top: 26px;
+.form .first {
+  margin-top: 78px;
+}
+.form .gap {
+  margin-top: 24px;
+}
+/* 비밀번호 점 크게 */
+.form .pw:not(:placeholder-shown) {
+  font-size: 22px;
+  letter-spacing: 3px;
 }
 .forgot {
   align-self: flex-end;
-  margin-top: 22px;
+  margin-top: 24px;
   padding: 0;
   border: none;
   background: none;
   color: var(--gray);
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
 }
 .bottom {
@@ -41,9 +56,9 @@
 .agree {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 0 0 22px 6px;
-  font-size: 15px;
+  gap: 5px;
+  margin-bottom: 16px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -52,30 +67,40 @@
   opacity: 0;
   pointer-events: none;
 }
-.circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  height: 25px;
-  border: 2px solid #cfcfcf;
+.check {
+  position: relative;
+  flex: none;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  color: #cfcfcf;
 }
-.agree input:checked + .circle {
-  border-color: var(--green);
-  background: var(--green);
-  color: var(--white);
+.off {
+  display: block;
+}
+/* 체크하면 같은 아이콘을 초록으로 */
+.agree input:checked + .check .off {
+  visibility: hidden;
+}
+.agree input:checked + .check::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--green-bright);
+  mask: url('/images/check-circle.svg') center / 36px 36px no-repeat;
+}
+.agree input:focus-visible + .check {
+  outline: 2px solid var(--green-bright);
+  outline-offset: -4px;
 }
 .err {
-  margin: -8px 0 14px 6px;
+  margin: -4px 0 12px 6px;
   color: var(--red);
   font-size: 13px;
 }
 .signup {
   align-self: center;
-  margin-top: 22px;
-  padding: 4px 10px;
+  margin-top: 20px;
   color: var(--gray);
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 500;
 }

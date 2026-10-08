@@ -21,7 +21,15 @@ export default function Splash() {
         <h1>오늘도 뇌 써볼까요?</h1>
         <p>AI에게 맡겨 뒀던 뇌, 잠시 되찾아 봐요</p>
       </div>
-      <Asset src="/images/splash-egg.png" alt="알에서 나오는 캐릭터" fallback="🥚" className={s.egg} />
+      <Asset
+        src="/images/splash-egg.png"
+        alt="알에서 나오는 캐릭터"
+        fallback="🥚"
+        width={284}
+        height={266}
+        preload
+        className={s.egg}
+      />
       <div className={s.bottom}>
         <Button onClick={start}>시작하기</Button>
       </div>

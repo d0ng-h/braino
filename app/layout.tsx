@@ -1,13 +1,27 @@
 import type { Metadata, Viewport } from 'next'
-import { Silkscreen } from 'next/font/google'
+import { Fredoka, Press_Start_2P, Protest_Strike } from 'next/font/google'
 import './globals.css'
 import './braino.css'
 
 // 픽셀 폰트 (BRAINO, RINO, LV, START, HOME)
-const pixel = Silkscreen({
-  weight: ['400', '700'],
+const pixel = Press_Start_2P({
+  weight: '400',
   subsets: ['latin'],
   variable: '--font-pixel',
+})
+
+// 연속 학습 숫자 폰트 (12)
+const number = Protest_Strike({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-number',
+})
+
+// 달력 화면 큰 숫자 폰트 (동글동글)
+const round = Fredoka({
+  weight: '700',
+  subsets: ['latin'],
+  variable: '--font-round',
 })
 
 export const metadata: Metadata = {
@@ -23,7 +37,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className={pixel.variable}>
+    <html lang="ko" className={`${pixel.variable} ${number.variable} ${round.variable}`}>
       <head>
         {/* 한글 기본 폰트 Pretendard */}
         <link

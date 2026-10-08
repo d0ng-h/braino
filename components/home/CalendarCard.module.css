@@ -1,0 +1,24 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding-left: 12px;
+  border-radius: 15px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+.icon {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 58px;
+  height: 66px;
+  object-fit: cover;
+  font-size: 40px;
+}

@@ -5,59 +5,66 @@
   z-index: 20;
   width: 100%;
   max-width: var(--app-width);
-  height: 104px;
+  height: 115px;
   transform: translateX(-50%);
   overflow: hidden;
   pointer-events: none;
 }
 .bar {
   position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  padding: 0 40px;
-  border-radius: 32px;
+  left: 26px;
+  right: 29px;
+  bottom: 19px;
+  height: 66px;
+  border-radius: 40px;
   background: var(--white);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-gray);
   pointer-events: auto;
 }
-.side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
+.medal,
+.profile {
+  position: absolute;
+  display: block;
+}
+.medal {
+  left: 34px;
+  top: 6px;
+}
+.profile {
+  right: 27px;
+  top: 5px;
 }
 .icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  font-size: 13px;
+  display: block;
+  font-size: 32px;
 }
+/* 가운데 큰 초록 동그라미. 화면 아래로 잘려서 보임 */
 .home {
   position: absolute;
-  top: -11px;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  top: 10px;
+  left: calc(50% - 73px);
   width: 144px;
   height: 144px;
-  margin-left: -72px;
-  padding-top: 10px;
   border-radius: 50%;
-  background: var(--green-bright);
-  color: var(--white);
-  font-size: 20px;
+  pointer-events: auto;
+}
+.circle {
+  position: absolute;
+  left: -8px;
+  top: -6px;
 }
 .homeIcon {
-  width: 52px;
-  height: 46px;
-  margin-bottom: 4px;
-  object-fit: contain;
-  font-size: 15px;
+  position: absolute;
+  left: 31px;
+  top: 7px;
+  font-size: 48px;
+}
+.homeText {
+  position: absolute;
+  top: 79px;
+  left: 4px;
+  right: 0;
+  color: var(--white);
+  font-size: 14px;
+  text-align: center;
 }

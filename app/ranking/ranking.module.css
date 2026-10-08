@@ -1,0 +1,209 @@
+.page {
+  min-height: 100dvh;
+  padding-bottom: 189px;
+  background: var(--white);
+}
+.title {
+  margin: 47px 0 0 30px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.sub {
+  margin: 3px 0 0 30px;
+  color: var(--gray-mid);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* 1~3등 */
+.podium {
+  position: relative;
+  height: 297px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+  background: var(--green-neon);
+}
+.top {
+  position: absolute;
+  top: 80px;
+  width: 101px;
+  height: 191px;
+  border-radius: 15px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.r1 {
+  top: 60px;
+  left: calc(50% - 62px);
+  width: 124px;
+}
+.r2 {
+  left: calc(50% - 174px);
+}
+.r3 {
+  left: calc(50% + 71px);
+}
+.crown {
+  position: absolute;
+}
+.r1 .crown {
+  left: 23px;
+  top: -37px;
+  width: 70px;
+  height: 65px;
+  overflow: hidden;
+}
+.r2 .crown {
+  left: 22px;
+  top: -40px;
+  width: 56px;
+  height: 55px;
+}
+.r3 .crown {
+  left: 26px;
+  top: -61px;
+  width: 49px;
+  height: 83px;
+}
+.digit {
+  position: absolute;
+  width: 15px;
+  height: 20px;
+  background: var(--text);
+}
+.r1 .digit {
+  left: 32px;
+  top: 17px;
+}
+.r2 .digit {
+  left: 20px;
+  top: 22px;
+}
+.r3 .digit {
+  left: 17px;
+  top: 44px;
+}
+.crownImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 1등 왕관은 왕관 3개 붙은 그림에서 첫번째만 */
+.r1 .crownImg {
+  inset: auto;
+  left: -0.11%;
+  top: -117.49%;
+  width: 286.03%;
+  height: 310.3%;
+}
+.face {
+  position: absolute;
+  left: 22px;
+  top: 26px;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.r1 .face {
+  left: 32px;
+  top: 24px;
+}
+.r3 .face {
+  width: 58px;
+  height: 59px;
+}
+.faceImg {
+  position: absolute;
+  max-width: none;
+}
+.topName,
+.topLv {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-size: 8px;
+}
+.topName {
+  top: 101px;
+}
+.topLv {
+  top: 116px;
+}
+.topLabel,
+.topDays {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  color: var(--green-text);
+  font-weight: 800;
+}
+.topLabel {
+  top: 137px;
+  font-size: 10px;
+}
+.topDays {
+  top: 151px;
+  font-size: 16px;
+}
+
+/* 4등부터 */
+.total {
+  margin: 17px 0 0 22px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.total small {
+  margin-left: 4px;
+  color: var(--gray-dark);
+  font-size: 11px;
+  font-weight: 300;
+}
+.list {
+  margin: 13px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.row {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  padding: 0 32px 0 19px;
+  font-size: 8px;
+}
+.rank {
+  width: 37px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.name {
+  margin: 0 18px 0 8px;
+}
+.days {
+  margin-left: auto;
+  color: var(--green-text);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* 내 순위 (아래 고정) */
+.me {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  max-width: var(--app-width);
+  height: 189px;
+  padding-top: 18px;
+  transform: translateX(-50%);
+  background: var(--green-pale);
+}

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabase'
 import Button from '../../components/ui/Button'
+import Asset from '../../components/ui/Asset'
 import s from './login.module.css'
 
 export default function LoginPage() {
@@ -36,11 +37,13 @@ export default function LoginPage() {
     <main className={s.page}>
       <form className={s.form} onSubmit={login}>
         <div className={s.head}>
-          <h1 className={'pixel ' + s.logo}>BRAINO</h1>
+          <h1 className={'pixel ' + s.logo}>
+            BR<span className={s.kern}>A</span>INO
+          </h1>
           <p>하루 10분, AI 대신 내 뇌로 생각하기</p>
         </div>
 
-        <label className="b-label" htmlFor="email">이메일</label>
+        <label className={'b-label ' + s.first} htmlFor="email">이메일</label>
         <input
           id="email"
           className="b-input"
@@ -55,7 +58,7 @@ export default function LoginPage() {
         <label className={'b-label ' + s.gap} htmlFor="pw">비밀번호</label>
         <input
           id="pw"
-          className="b-input"
+          className={'b-input ' + s.pw}
           type="password"
           value={pw}
           onChange={(e) => setPw(e.target.value)}
@@ -71,10 +74,8 @@ export default function LoginPage() {
         <div className={s.bottom}>
           <label className={s.agree}>
             <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} />
-            <span className={s.circle}>
-              <svg viewBox="0 0 24 24" width="16" height="16">
-                <path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <span className={s.check}>
+              <Asset src="/images/check-circle.svg" alt="" width={36} height={36} className={s.off} />
             </span>
             개인정보 수집 및 이용에 동의합니다.
           </label>

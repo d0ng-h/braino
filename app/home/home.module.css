@@ -1,16 +1,16 @@
 .page {
   min-height: 100dvh;
-  padding-bottom: 130px;
+  padding-bottom: 103px;
   background: var(--white);
 }
 .body {
-  padding: 0 26px;
+  padding: 0 29px 0 26px;
 }
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 15px;
 }
 .left {
   display: flex;
@@ -21,5 +21,5 @@
 .right {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }

@@ -1,0 +1,197 @@
+.page {
+  min-height: 100dvh;
+  padding-bottom: 130px;
+  background: var(--white);
+}
+.body {
+  padding: 0 20px;
+}
+
+/* 프로필 */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 39px;
+}
+.who {
+  margin-left: 19px;
+}
+.name {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  font-size: 28.8px;
+  font-weight: 500;
+}
+.charName {
+  font-size: 20px;
+}
+.id {
+  margin: 7px 0 0;
+  font-size: 16px;
+}
+.logout {
+  margin: 0 21px 0 auto;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-sub);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 레벨 카드 */
+.level {
+  height: 100px;
+  margin-top: 24px;
+  padding: 26px 18px 0 17px;
+  border-radius: 20px;
+  background: var(--green-pale);
+}
+.lv {
+  margin: 0;
+  color: var(--green-bright);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.bar {
+  height: 4px;
+  margin-top: 6px;
+  border-radius: 8px;
+  background: var(--white);
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  border-radius: 8px;
+  background: var(--green-bright);
+}
+.tip {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+
+/* 남은 학습, 출석, 최대 연속 */
+.stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100px;
+  margin-top: 10px;
+  padding-top: 15px;
+  border: 1px solid var(--green-bright);
+  border-radius: 20px;
+  background: var(--paper);
+}
+.stat {
+  text-align: center;
+}
+.statLabel {
+  margin: 0;
+  font-size: 12px;
+  line-height: 22px;
+}
+.statValue {
+  margin: 2px 0 0;
+  color: var(--green-bright);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43px;
+}
+.statValue small {
+  font-size: 16px;
+  font-weight: 400;
+}
+.divider {
+  position: absolute;
+  top: 14.5px;
+}
+.d1 {
+  left: 113px;
+}
+.d2 {
+  left: 246px;
+}
+
+/* 연속 학습 카드 */
+.streak {
+  position: relative;
+  height: 104px;
+  margin-top: 12px;
+  border-radius: 15px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.fire {
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  font-size: 64px;
+}
+.streakText {
+  position: absolute;
+  top: 24px;
+  right: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.streakRow {
+  display: flex;
+  align-items: flex-start;
+}
+.streakNum {
+  margin: 0;
+  font-family: var(--font-number), sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+}
+.streakLabel {
+  margin: 6px 0 0 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: right;
+}
+.cheer {
+  margin: -5px 0 0;
+  color: var(--gray);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13px;
+}
+
+/* 아래 두 카드 */
+.startCard {
+  display: block;
+  height: 85px;
+  margin-top: 10px;
+  padding: 18px 18px 0;
+  border-radius: 15px;
+  background: var(--green-soft);
+  box-shadow: var(--shadow);
+}
+.cardTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.start {
+  margin: 7px 0 0;
+  font-size: 14px;
+}
+.calCard {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin-top: 12px;
+  padding-left: 24px;
+  border-radius: 15px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  font-size: 20px;
+  font-weight: 700;
+}
